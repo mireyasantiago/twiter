@@ -1,21 +1,37 @@
 alert("mensaje");
 
 function mostrar(){
-  var texto=document.getElementById("comentarios").value;
+  var texto=document.getElementById("textArea").value;
       document.getElementById('previoTexto').innerHTML = texto;
 
 }
 
-function contador(){
+function mostrarNombre(){
+  var nombre=document.getElementById("nombre").value;
+      document.getElementById('nombreAutor').innerHTML = nombre;
+
+}
+
+function funciones(){
+  mostrar();
+   mostrarNombre();
+}
 
 
 
-  //var onkeypress="document.getElementById'cuenta').inner HTML = this.value.length" />(<span id="cuenta"></span>/500)
-  var contando= document.getElementById("comentarios").value;
-  var limite= contando.length -140;
-  document.getElementById('contador').innerText=  contador +"/" limite;
 
 
+function contar(){
+  var max = "140";
+  var caracteres = document.getElementById("textArea").value;
+  var longitud = caracteres.length;
 
-  //for(i=0; i < 140; i++){}
+  if(longitud <= max){
+    document.getElementById("contador").value = max-longitud;
+  }
+  else{
+    document.getElementById("textArea").value = caracteres.substr( 0,max);
+    /*El método substr() devuelve los caracteres de una cadena de acuerdo
+    al número de caracteres que se especifiquen.(cadena.substr(inicio[, longitud]))*/
+  }
 }

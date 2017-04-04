@@ -5,19 +5,20 @@
     <title>Twitter</title>
   </head>
   <body>
+
     <h1>Twitter</h1>
-    <textarea name="comentarios" rows="8" cols="60" id="comentarios"></textarea>
-
+    <textarea id="textArea" placeholder="Un Tweet"  onKeyDown="contar()"
+     rows="10" cols="40">
+    </textarea>
     <p>De: </p>
-      <input id="nombre"></input>
-    <input type="button" value="enviar"  onclick="mostrar();"/>
-    <span id="contador">  </span>
-
+    <input id="nombre"></input>
+    <button  onclick="funciones();">Enviar</button>
+    <input type="text" size="3" value="140" id="contador">
     <hr>
-
     <h2>Tweet Stories</h2>
     <div id="previoTexto"></div>
     <p>Por <div id="nombreAutor"></div> </p>
+
 
 
 
